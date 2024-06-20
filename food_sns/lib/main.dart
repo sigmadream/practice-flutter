@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:food_sns/screen/SplashScreen.dart';
+import 'package:food_sns/screen/splash_screen.dart';
+import 'package:food_sns/screen/login_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -18,7 +19,10 @@ class MyApp extends StatelessWidget {
       ),
       debugShowCheckedModeBanner: false,
       initialRoute: '/',
-      routes: {'/': (context) => SplashScreen()},
+      routes: {
+        '/': (context) => const SplashScreen(),
+        '/login': (context) => const LoginScreen(),
+      },
     );
   }
 }

@@ -1,16 +1,26 @@
 # food_sns
 
-A new Flutter project.
+> Flutter project를 기반으로 한 위치 기반 간단한 공유 SNS 서비스 입니다.
 
-## Getting Started
+## 시작하기
 
-This project is a starting point for a Flutter application.
+### 프로젝트 생성
 
-A few resources to get you started if this is your first Flutter project:
+```bash
+flutter create food_sns
+```
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+### 주요 라이브러리
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- supabase_flutter,
+- image_picker
+- flutter_naver_map
+- http
+- daum_postcode_search
+- geolocator
+- flutter_inappwebview,
+- intl
+
+### Assets
+
+- [로고](https://www.flaticon.com/free-icon/plate_721743?term=restaurant&page=1&position=16&origin=style&related_id=721743)
