@@ -8,9 +8,9 @@
 - supabase_flutter
 - image_picker
 - flutter_naver_map
+- geolocator
 - http
 - daum_postcode_search
-- geolocator
 - flutter_inappwebview,
 - intl
 

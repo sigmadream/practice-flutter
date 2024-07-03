@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
+import 'package:flutter_naver_map/flutter_naver_map.dart';
 import 'package:food_sns/screen/main_screen.dart';
 import 'package:food_sns/screen/register_screen.dart';
 import 'package:food_sns/screen/splash_screen.dart';
@@ -13,6 +14,11 @@ Future<void> main() async {
     url: dotenv.get('PROJECT_URL'),
     anonKey: dotenv.get('PROJECT_API_KEY'),
   );
+  await NaverMapSdk.instance.initialize(
+    clientId: dotenv.get('NAVER_API_KEY'),
+    onAuthFailed: (ex) => print('네이버 맵 인증 오류 : $ex'),
+  );
+
   runApp(const MyApp());
 }
 
