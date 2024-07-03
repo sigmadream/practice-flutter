@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
+import 'package:food_sns/screen/main_screen.dart';
 import 'package:food_sns/screen/register_screen.dart';
 import 'package:food_sns/screen/splash_screen.dart';
 import 'package:food_sns/screen/login_screen.dart';
@@ -32,6 +33,7 @@ class MyApp extends StatelessWidget {
         '/': (context) => const SplashScreen(),
         '/login': (context) => const LoginScreen(),
         '/register': (context) => const RegisterScreen(),
+        '/main': (context) => const MainScreen(),
       },
     );
   }

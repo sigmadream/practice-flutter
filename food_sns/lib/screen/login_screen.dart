@@ -5,7 +5,6 @@ import 'package:food_sns/widget/section_text.dart';
 import 'package:food_sns/widget/text_fields.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 
-
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
 
@@ -88,14 +87,14 @@ class _LoginScreenState extends State<LoginScreen> {
                       }
 
                       bool isLoginSuccess =
-                      await loginWithEmail(emailValue, passwordValue);
+                          await loginWithEmail(emailValue, passwordValue);
 
                       if (!context.mounted) return;
                       if (!isLoginSuccess) {
                         showSnackBar(context, '로그인을 실패하였습니다.');
                         return;
                       }
-                      Navigator.popAndPushNamed(context, '/');
+                      Navigator.popAndPushNamed(context, '/main');
                     },
                   ),
                 ),
@@ -136,7 +135,8 @@ class _LoginScreenState extends State<LoginScreen> {
 
   Future<bool> loginWithEmail(String emailValue, String passwordValue) async {
     bool isLoginSuccess = false;
-    final AuthResponse res = await supabase.auth.signInWithPassword(email: emailValue, password: passwordValue);
+    final AuthResponse res = await supabase.auth
+        .signInWithPassword(email: emailValue, password: passwordValue);
     if (res.user! != null) {
       isLoginSuccess = true;
     } else {
