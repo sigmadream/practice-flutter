@@ -23,7 +23,7 @@ class FoodStoreModel {
 
   Map<String, dynamic> toMap() {
     return {
-      'store_img_url': storeImgUrl,
+      'store_image_url': storeImgUrl,
       'store_address': storeAddress,
       'uid': uid,
       'store_name': storeName,
