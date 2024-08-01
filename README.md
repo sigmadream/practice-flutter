@@ -1,24 +1,39 @@
+# food_sns
 
-# {Ubuntu, macOS}에서 Flutter 개발 환경 구성 하는 방법
+> Flutter project를 기반으로 한 위치 기반 공유 SNS 서비스 입니다. 실행은 가능하면, 기기에서 진행하세요.
 
-## Ubuntu
+## 주요 라이브러리
 
-### JDK 설치
+- supabase_flutter
+- image_picker
+- flutter_naver_map
+- geolocator
+- http
+- daum_postcode_search
+- flutter_inappwebview,
+- intl
+
+## {Ubuntu, macOS}에서 Flutter 개발 환경 구성 하는 방법
+
+### Ubuntu
+
+#### JDK 설치
 
 ```bash
 sudo apt install default-jdk
 ```
 
-### Android Studio 설치
+#### Android Studio 설치
 
 - `JetBrains Toolbox` 설치
   - [이전 영상](https://youtu.be/oZaWZ8dTjaQ?t=407)에 해당 설치 방법을 소개
+
 - `Android Studio` 설치 > 관련 SDK 설치(API v34)
   - `SDK Tools` > Android SDk command-line Tools 설치
   - `Virtual Device Configuration` > 에뮬레이터 설치(API v34)
   - 간단하게 App 하나 만들어서 실행 확인
 
-### Flutter SDK 설치
+#### Flutter SDK 설치
 
 - Flutter SDK 설치
   - snap 명령어
@@ -64,14 +79,14 @@ Doctor summary (to see all details, run flutter doctor -v):
 • No issues found!
 ```
 
-### VSCode에 Flutter 플러그인 설치
+#### VSCode에 Flutter 플러그인 설치
 
 - VS 확장 > Flutter 검색 > 설치
 - Command Palette > flutter: New Project
 - Command Palette > flutter: Select Device
   - Android, Linux, macOS, iOS 등을 선택해서 실행 확인
 
-### Android 기기 연결을 위한 설정
+#### Android 기기 연결을 위한 설정
 
 - `adb`를 터미널에서 사용할 수 있도록, 관련 경로를 PATH에 추가해주세요.
 
@@ -117,15 +132,15 @@ List of devices attached
 HVA0X8X0 device
 ```
 
-## macOS
+### macOS
 
-- Apple Silcon 사용자는 아래 명령어를 사용해서 로제타2를 활성화
+#### Apple Silcon 사용자는 아래 명령어를 사용해서 로제타2를 활성화
 
 ```bash
 sudo softwareupdate --install-rosetta --agree-to-license
 ```
 
-- flutter sdk 설치
+#### flutter sdk 설치
 
 ```bash
 brew update 
@@ -133,27 +148,19 @@ brew upgrade
 brew install git flutter
 ```
 
-- android studio
+#### android studio
 
-  - [android studio를 다운로드](https://developer.android.com/studio) 받으시고, 설치
+- [android studio를 다운로드](https://developer.android.com/studio) 받으시고, 설치
+- 초기 설정화면에서 `android sdk manaer` 등을 설치
+- project > more action > sdk manager 에서 아래 도구가 설치되어 있는지 확인(미설치된 도구는 설치할 것)
+  - Android SDK Platform, API 34.0.5
+  - Android SDK Command-line Tools
+  - Android SDK Build-Tools
+  - Android SDK Platform-Tools
+  - Android Emulator
 
-  - 초기 설정화면에서 `android sdk manaer` 등을 설치
-
-  - project > more action > sdk manager 에서 아래 도구가 설치되어 있는지 확인(미설치된 도구는 설치할 것)
-
-    - Android SDK Platform, API 34.0.5
-
-    - Android SDK Command-line Tools
-
-    - Android SDK Build-Tools
-
-    - Android SDK Platform-Tools
-
-    - Android Emulator
-
-  - project > virtual device
-
-    - AVD 다운로드 및 에뮬레이터 생성
+- project > virtual device
+  - AVD 다운로드 및 에뮬레이터 생성
 
 - flutter doctor를 사용해서 점검
   - 초기 설정시 flutter의 android license 동의가 필요하다는 문구가 나온다면 `flutter doctor --android-licenses`를 사용해서 라이센스 동의할 것
@@ -178,15 +185,13 @@ Doctor summary (to see all details, run flutter doctor -v):
 [✓] Network resources
 ```
 
-- 프로젝트 생성 후 실행 확인
+#### 프로젝트 생성 후 실행 확인
 
-  - VSCode에서 Flutter 플러그인 설치
+- VSCode에서 Flutter 플러그인 설치
+- Flutter 프로젝트 생성 후 > 디바이스 선택(macOS 추천) > Run > Run without Debugger
+- 실행 확인
 
-  - Flutter 프로젝트 생성 후 > 디바이스 선택(macOS 추천) > Run > Run without Debugger
-
-  - 실행 확인
-
-- iOS 설정
+#### iOS 설정
 
 ```bash
 $ brew install rbenv
